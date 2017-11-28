@@ -45,16 +45,6 @@ init(Args) ->
             {stop, sync_connect_failed}
     end.
 
-%%=========================================================================
-%% add handle {apply, Mod, Fun, Args} msg
-%% Author: GIHO Lee
-
-handle_call({apply, Mod, Fun, Args}, _From, State=#state{conn=Conn}) ->
-    Reply = apply(Mod, Fun, [Conn | Args]),
-    handle_call_reply(Reply, State);
-
-%%=========================================================================
-
 handle_call({F, A1, A2, A3, A4, A5, A6}, _From, State=#state{conn=Conn}) ->
     Reply = riakc_pb_socket:F(Conn, A1, A2, A3, A4, A5, A6),
     handle_call_reply(Reply, State);

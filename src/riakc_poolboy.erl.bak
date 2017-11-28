@@ -2,14 +2,6 @@
 
 -include_lib("riakc/include/riakc.hrl").
 
-%%==============================
-%% add export functions
-%% DateTime: 2017-11-28 09:45 
-%% Author: GIHO Lee
-
--export([exec/2]).
-%%==============================
-
 -export([counter_incr/4]).
 -export([counter_val/3]).
 -export([delete/3]).

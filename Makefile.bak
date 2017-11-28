@@ -1,23 +1,21 @@
 .PHONY: deps test doc
 
-REBAR3=./rebar3
-
 all: deps compile
 
 compile:
-	$(REBAR3) compile
+	rebar compile
 
 deps:
-	$(REBAR3) get-deps
+	rebar get-deps
 
 clean:
-	$(REBAR3) clean
+	rebar clean
 
 distclean: clean 
-	$(REBAR3) delete-deps
+	rebar delete-deps
 
 test: 
-	$(REBAR3) skip_deps=true ct
+	rebar skip_deps=true ct
 
 dialyzer: compile
 	@dialyzer -Wno_undefined_callbacks \

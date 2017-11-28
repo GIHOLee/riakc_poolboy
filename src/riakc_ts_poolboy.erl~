@@ -1,0 +1,19 @@
+-module(riakc_ts_poolboy).
+
+-include_lib("riakc/include/riakc.hrl").
+
+-export([
+	 'query'/2, 'query'/3, 'query'/4, 'query'/5,
+	 get_coverage/3, 
+	 replace_coverage/4, replace_coverage/5,
+	 put/3, put/4,
+	 get/4,
+	 delete/4,
+	 stream_list_keys/2, stream_list_keys/3	 
+	]).
+
+
+'query'(PoolName, Query) ->
+    'query'(PoolName, Query, [], undefined, []).
+
+
