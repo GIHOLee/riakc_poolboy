@@ -1,6 +1,6 @@
 # Riak Protocol Buffers Client Pool
 
-[![Build Status][travis_ci_image]][travis_ci]
+fork from puzza007/riakc_poolboy(https://github.com/puzza007/riakc_poolboy), add some module package, such as riakc_ts...
 
 About
 =========
@@ -32,5 +32,5 @@ TODO
 * Support streaming functions
 * More tests
 
-[travis_ci]: https://travis-ci.org/puzza007/riakc_poolboy
-[travis_ci_image]: https://travis-ci.org/puzza007/riakc_poolboy.png
+=======
+
